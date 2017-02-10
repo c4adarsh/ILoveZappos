@@ -1,6 +1,7 @@
 package com.zapoos.ilovezapoos;
 
 import android.app.Application;
+import android.support.v7.app.AppCompatDelegate;
 import android.util.Log;
 
 import com.zapoos.ilovezapoos.dagger.Component.DaggerNetworkComponent;
@@ -17,6 +18,10 @@ public class ILoveZapoosApplication extends Application{
     public static final String TAG  = "ILoveZapoosApplication";
 
     private NetworkComponent mNetworkComponent;
+
+    static {
+        AppCompatDelegate.setCompatVectorFromResourcesEnabled(true);
+    }
 
     @Override
     public void onCreate() {
